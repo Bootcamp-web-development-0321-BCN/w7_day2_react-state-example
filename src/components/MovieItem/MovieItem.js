@@ -1,8 +1,8 @@
 import React from 'react';
 
-function MovieItem({ id, title, year, runtime, director, genres }) {
+function MovieItem({ id, title, year, runtime, director, genres, removeItem }) {
   // const { id, title, year, runtime, director, genres } = props;
-  
+
   return (
     <div className="movie-item">
       <p>Title: {title}</p>
@@ -18,6 +18,7 @@ function MovieItem({ id, title, year, runtime, director, genres }) {
           })
         }
       </ul>
+      <button onClick={removeItem}>Delete</button>
     </div>
   )
 }
